@@ -1,5 +1,3 @@
-# -*- coding: latin-1 -*-
-
 """
 python-nmap - 2010.12.17
 
@@ -38,7 +36,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
-from .nmap import *  # noqa
-from .nmap import __author__  # noqa
-from .nmap import __version__  # noqa
-from .nmap import __last_modification__  # noqa
+from .errors import PortScannerError, PortScannerTimeout
+from .host_dict import HostDict
+from .port_scanner import PortScanner
+from .utils import convert_nmap_output_to_encoding
+
+from .__about__ import __author__
+from .__about__ import __version__
+from .__about__ import __last_modification__
